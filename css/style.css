@@ -49,12 +49,8 @@ nav{
   height: 50px;
 }
 
-.flex-item{
-  border: 1px solid black;
-}
 
-
-nav>div:first-child>img{
+.logo>img{
 width: 200px;
 }
 
@@ -83,13 +79,12 @@ nav ul li{
 }
 
 .jumbotron-flex>div:first-child{
-  width: 60%;
+  flex-basis: 60%;
   border: 1px solid black;
-  margin-bottom: 30px;
 }
 
 .jumbotron-flex>div:last-child{
-  width: 30%;
+  flex-basis: 30%;
   border: 1px solid black;
   text-align: center;
   background-color: white;
@@ -106,11 +101,13 @@ nav ul li{
 .loghi-flex{
   display: flex;
   justify-content: space-between;
+  /* align-items: center; */
   margin: 40px 0;
 }
 
 .loghi-flex>div{
   border: 1px solid blue;
+  flex-grow: 1;
 }
 
 .loghi-flex img{
@@ -122,37 +119,36 @@ nav ul li{
 /* regole seconda sezione main: #my_why */
 #my_why h2{
   text-align: center;
+  margin-bottom: 30px;
 }
+
+#my_why ul li{
+  list-style-type: none;
+  padding: 10px 0;
+  text-align: left;
+  border: 1px solid blue;
+}
+
 .why-flex{
   display: flex;
   justify-content: space-around;
 }
 
-.why-flex>div{
-  background-color: red;
-  border: 1px solid black;
-}
-
-/* .why-flex>div:first-child{
-  /* width: 30%; */
-}
-
-/* .why-flex>div:last-child{ */
-  /* width: 70%; */
-/* } */
-
-.why-flex > div:first-child > ul li{
-  list-style-type: none;
-  background-color: yellow;
+.why-flex-sx{
+  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .why-flex-dx{
+  flex-basis: 60%;
   display: flex;
   flex-wrap: wrap;
 }
 
 .why-flex-dx>div{
-  width: 50%;
+  flex-basis: 50%;
+  border: 1px solid blue;
 }
 
 
@@ -176,7 +172,7 @@ nav ul li{
   }
 
   .jumbotron-flex>div:last-child{
-    width: 40%;
+    flex-basis: 40%;
   }
 
 
@@ -192,25 +188,35 @@ nav ul li{
   }
 
   .jumbotron-flex,
-  .loghi-flex{
+  .loghi-flex, .why-flex{
     flex-wrap: wrap;
   }
 
   .jumbotron-flex>div:first-child,
   .jumbotron-flex>div:last-child{
-    width: 100%;
+    flex-basis: 100%;
     padding: 0 20px;
   }
 
+  .jumbotron-flex>div:first-child{
+    margin-bottom: 30px;
+  }
+
   .loghi-flex>div{
-    width: 50%;
+    flex-basis: 50%;
     padding: 0 20px;
     display: flex;
     align-items: center;
   }
 
-  .loghi-flex>div:last-child{
-    width: 50%;
-    padding: 0 20px;
+  .why-flex-sx, .why-flex-dx, .why-flex-dx>div {
+    flex-basis: 100%;
+    margin-bottom: 30px;
   }
+
+  .why-flex-sx{
+    justify-content: flex-start;
+  }
+
+
 }

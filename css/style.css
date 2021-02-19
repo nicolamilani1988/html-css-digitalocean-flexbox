@@ -109,9 +109,52 @@ nav ul li{
   margin: 40px 0;
 }
 
+.loghi-flex>div{
+  border: 1px solid blue;
+}
+
 .loghi-flex img{
   width: 100%;
+  border: 1px solid red;
 }
+
+
+/* regole seconda sezione main: #my_why */
+#my_why h2{
+  text-align: center;
+}
+.why-flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+.why-flex>div{
+  background-color: red;
+  border: 1px solid black;
+}
+
+/* .why-flex>div:first-child{
+  /* width: 30%; */
+}
+
+/* .why-flex>div:last-child{ */
+  /* width: 70%; */
+/* } */
+
+.why-flex > div:first-child > ul li{
+  list-style-type: none;
+  background-color: yellow;
+}
+
+.why-flex-dx{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.why-flex-dx>div{
+  width: 50%;
+}
+
 
 
 
@@ -162,6 +205,8 @@ nav ul li{
   .loghi-flex>div{
     width: 50%;
     padding: 0 20px;
+    display: flex;
+    align-items: center;
   }
 
   .loghi-flex>div:last-child{

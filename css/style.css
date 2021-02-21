@@ -101,7 +101,7 @@ nav ul li{
 .loghi-flex{
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
   margin: 40px 0;
 }
 
@@ -152,6 +152,88 @@ nav ul li{
 }
 
 
+/* regole terza sezione main: #my_who */
+#my_who{
+  text-align: center;
+  background-color: #F3F5F9;
+}
+
+.who-flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.who-flex .img-container{
+  flex-basis: 60%;
+  margin: 30px 20px 20px;
+}
+
+.img-container>img{
+  width: 100%;
+}
+
+.who-flex>div:first-child,
+.who-flex>div:last-child{
+  font-size: 30px;
+}
+
+
+/* regole quarta sezione main: #my_features */
+#my_features h2{
+  text-align: center;
+}
+
+.features-flex{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-flex>div{
+  flex-basis: calc(100%/3);
+  border: 1px solid black;
+}
+
+
+/* regole quinta sezione main: #my_countries */
+#my_countries{
+  background-color: blue;
+  text-align: center;
+}
+
+#my_countries ul{
+  width: calc( (100% / 2) - 20px);
+  display: inline-block;
+}
+
+#my_countries ul li{
+  list-style-type: none;
+  border-bottom: 1px solid white;
+  padding: 10px;
+}
+
+.flex-countries{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.flex-city{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-city>.white_text{
+  text-align: left;
+}
+
+.flex-city>.white_text.due{
+  flex-basis: 50%;
+}
+
+
+
 
 
 /* media query */
@@ -173,6 +255,15 @@ nav ul li{
 
   .jumbotron-flex>div:last-child{
     flex-basis: 40%;
+  }
+
+  .flex-countries{
+    flex-wrap: wrap;
+  }
+
+  #my_countries ul{
+    width: 100%;
+    margin-bottom: 20px;
   }
 
 
@@ -216,6 +307,17 @@ nav ul li{
 
   .why-flex-sx{
     justify-content: flex-start;
+  }
+
+  .features-flex{
+    flex-wrap: wrap;
+  }
+
+  .features-flex>div{
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    border: 1px solid red;
+    margin-bottom: 20px;
   }
 
 

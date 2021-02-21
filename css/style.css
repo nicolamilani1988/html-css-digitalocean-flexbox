@@ -153,7 +153,8 @@ nav ul li{
 
 
 /* regole terza sezione main: #my_who */
-#my_who{
+#my_who,
+#my_love{
   text-align: center;
   background-color: #F3F5F9;
 }
@@ -197,7 +198,7 @@ nav ul li{
 
 
 /* regole quinta sezione main: #my_countries */
-#my_countries{
+#my_countries, #my_start{
   background-color: blue;
   text-align: center;
 }
@@ -233,6 +234,27 @@ nav ul li{
 }
 
 
+/* regole sesta sezione #my_love */
+.img-container.box{
+  padding: 20px;
+  background-color: white;
+}
+
+.img-container.box img{
+  width: 70%;
+}
+
+
+/* regole footer */
+footer{
+  background-color: darkblue;
+}
+
+.footer-flex{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 
 
@@ -265,6 +287,20 @@ nav ul li{
     width: 100%;
     margin-bottom: 20px;
   }
+
+  .footer-flex>div:first-child{
+    flex-basis: 100%;
+  }
+
+  .footer-flex>div:nth-child(2),
+  .footer-flex>div:nth-child(3),
+  .footer-flex>div:nth-child(4),
+  .footer-flex>div:last-child{
+    flex-basis: 50%;
+    margin-top: 20px;
+  }
+
+}
 
 
 /* media query small */
@@ -320,5 +356,12 @@ nav ul li{
     margin-bottom: 20px;
   }
 
+  .footer-flex>div:nth-child(2),
+  .footer-flex>div:nth-child(3),
+  .footer-flex>div:nth-child(4),
+  .footer-flex>div:last-child{
+    flex-basis: 100%;
+    margin-top: 20px;
+  }
 
 }
